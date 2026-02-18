@@ -1,0 +1,322 @@
+/* TaxaDetail.css */
+
+.taxa-detail-container {
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.taxa-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.taxa-header h1 {
+    color: white;
+}
+
+.taxa-header h2 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.taxa-header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Taxonomy Tree Styles */
+.taxonomy-tree {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+}
+
+.taxonomy-item {
+    padding: 0.5rem 0;
+    border-left: 3px solid transparent;
+    padding-left: 1rem;
+    transition: all 0.2s ease;
+}
+
+.taxonomy-item.current {
+    border-left-color: #3b82f6;
+    background-color: #eff6ff;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+.taxonomy-item:hover {
+    background-color: #f3f4f6;
+    border-radius: 0.25rem;
+}
+
+.rank-label {
+    font-weight: 500;
+    color: #6b7280;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.rank-separator {
+    color: #9ca3af;
+    margin: 0 0.5rem;
+}
+
+.taxa-link {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-style: italic;
+}
+
+.taxa-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.taxa-name {
+    color: #374151;
+    font-style: italic;
+}
+
+.common-name {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+/* Children Section Styles */
+.children-section {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.child-rank-section {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.5rem;
+}
+
+.child-rank-section:last-child {
+    border-bottom: none;
+}
+
+.child-card {
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.child-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+}
+
+.child-card h4 {
+    transition: color 0.2s ease;
+}
+
+.child-card:hover h4 {
+    color: #1d4ed8 !important;
+}
+
+/* Media Grid Styles */
+.media-grid {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.media-card {
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.media-card img {
+    transition: transform 0.3s ease;
+}
+
+.media-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Status Badge Styles */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Statistics Cards */
+.stats-card {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #bae6fd;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+}
+
+/* Tab Styles */
+.tab-button {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.tab-button.active::after {
+    background-color: #3b82f6;
+}
+
+/* Loading Animation */
+.loading-spinner {
+    border: 4px solid #f3f4f6;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .taxa-detail-container {
+        padding: 1rem;
+    }
+    
+    .taxa-header {
+        padding: 1rem;
+    }
+    
+    .taxa-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .taxonomy-item {
+        padding-left: 0.5rem;
+    }
+    
+    .rank-label {
+        min-width: 80px;
+        font-size: 0.875rem;
+    }
+    
+    .child-card {
+        margin-bottom: 0.5rem;
+    }
+    
+    .media-card img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .taxa-header .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .stats-card {
+        text-align: center;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .taxa-detail-container {
+        background-color: #1f2937;
+        color: #f9fafb;
+    }
+    
+    .taxa-header {
+        background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    }
+    
+    .taxonomy-tree {
+        background-color: #374151;
+        border-color: #4b5563;
+    }
+    
+    .taxonomy-item.current {
+        background-color: #1e40af;
+    }
+    
+    .child-card,
+    .media-card {
+        background-color: #374151;
+        border-color: #4b5563;
+    }
+    
+    .rank-label {
+        color: #d1d5db;
+    }
+    
+    .taxa-name {
+        color: #f3f4f6;
+    }
+    
+    .common-name {
+        color: #9ca3af;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .taxa-detail-container {
+        background-color: white;
+        color: black;
+    }
+    
+    .taxa-header {
+        background: white;
+        color: black;
+        border: 1px solid #000;
+    }
+    
+    .child-card,
+    .media-card {
+        break-inside: avoid;
+        border: 1px solid #000;
+    }
+    
+    .tab-button {
+        display: none;
+    }
+    
+    .media-card img {
+        max-height: 200px;
+    }
+}

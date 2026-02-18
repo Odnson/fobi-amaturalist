@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="white">
+  <!-- Body -->
+  <ellipse cx="32" cy="38" rx="3.5" ry="12" />
+  <!-- Head -->
+  <circle cx="32" cy="22" r="5" />
+  <!-- Eyes -->
+  <circle cx="29" cy="21" r="2" fill="#333"/>
+  <circle cx="35" cy="21" r="2" fill="#333"/>
+  <!-- Left wings -->
+  <ellipse cx="18" cy="30" rx="12" ry="5" transform="rotate(-20 18 30)" opacity="0.85"/>
+  <ellipse cx="20" cy="38" rx="10" ry="4" transform="rotate(10 20 38)" opacity="0.7"/>
+  <!-- Right wings -->
+  <ellipse cx="46" cy="30" rx="12" ry="5" transform="rotate(20 46 30)" opacity="0.85"/>
+  <ellipse cx="44" cy="38" rx="10" ry="4" transform="rotate(-10 44 38)" opacity="0.7"/>
+  <!-- Tail tip -->
+  <ellipse cx="32" cy="52" rx="2" ry="3" />
+</svg>
